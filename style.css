@@ -1,0 +1,473 @@
+  /* =========================================
+           SISTEMA DE CORES (INSPIRAÇÃO IPIRANGA)
+           ========================================= */
+        :root {
+            --brand-blue: #003399;       /* Azul Escuro Principal */
+            --brand-yellow: #FFCC00;     /* Amarelo Vibrante */
+            --brand-orange: #FF6600;     /* Laranja de Destaque */
+            --gray-dark: #1C2331;        /* Fundo Neutro Escuro */
+            --gray-light: #F4F6F9;       /* Fundo Neutro Claro */
+            --text-main: #2A3547;        /* Texto Principal */
+            --text-muted: #64748B;       /* Texto Secundário */
+            --white: #FFFFFF;
+            --radius: 6px;               /* Bordas mais retas transmitem mais solidez */
+        }
+
+        /* =========================================
+           RESET E ESTRUTURAÇÃO PROFISSIONAL
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--gray-light);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* =========================================
+           BOTÕES E COMPONENTES DE INTERAÇÃO
+           ========================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-yellow);
+            color: var(--brand-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: #E6B800;
+        }
+
+        .btn-secondary {
+            background-color: var(--brand-blue);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: #002673;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* =========================================
+           HEADER (NAVEGAÇÃO)
+           ========================================= */
+        header {
+            background-color: var(--brand-blue);
+            border-bottom: 4px solid var(--brand-yellow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            color: var(--white);
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo-sub {
+            color: var(--brand-yellow);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--brand-yellow);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           HERO (PAINEL DE ENTRADA)
+           ========================================= */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,51,153,0.95) 0%, rgba(28,35,49,0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            border-bottom: 8px solid var(--brand-orange);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            color: var(--white);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--brand-yellow);
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: #E2E8F0;
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        /* Painel Digital de Vagas (Evita o visual genérico) */
+        .panel-status {
+            background: var(--gray-dark);
+            border: 2px solid #334155;
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+
+        .panel-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        .panel-row:last-child {
+            border-bottom: none;
+        }
+
+        .panel-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #94A3B8;
+            text-transform: uppercase;
+        }
+
+        .panel-value {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--brand-yellow);
+        }
+
+        .indicator-green {
+            color: #10B981;
+        }
+
+        /* =========================================
+           PAINEL DE PREÇOS (QUADRO DE PRODUTOS)
+           ========================================= */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--brand-blue);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+        }
+
+        .price-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .price-card {
+            background: var(--white);
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .badge-fuel {
+            background-color: var(--brand-blue);
+            color: var(--white);
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            align-self: flex-start;
+            margin-bottom: 16px;
+            border-radius: 3px;
+        }
+
+        .badge-orange {
+            background-color: var(--brand-orange);
+        }
+
+        .fuel-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .fuel-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .fuel-price-block {
+            border-top: 1px solid #F1F5F9;
+            padding-top: 16px;
+            margin-top: auto;
+        }
+
+        .price-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .price-value {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--brand-blue);
+            line-height: 1;
+            margin-top: 4px;
+        }
+
+        .price-value small {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* =========================================
+           ESTRUTURA E INFRAESTRUTURA
+           ========================================= */
+        .bg-white {
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            background: #EFF6FF;
+            color: var(--brand-blue);
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            border: 1px solid #DBEAFE;
+        }
+
+        .feature-text h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--gray-dark);
+        }
+
+        .feature-text p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* =========================================
+           RODAPÉ TÉCNICO
+           ========================================= */
+        footer {
+            background-color: var(--gray-dark);
+            color: #94A3B8;
+            padding: 60px 0 30px;
+            font-size: 0.95rem;
+            border-top: 6px solid var(--brand-yellow);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .footer-brand h4 {
+            color: var(--white);
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links h5 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #94A3B8;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--brand-yellow);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* =========================================
+           RESPONSIVIDADE AJUSTADA
+           ========================================= */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 94px;
+                left: 0;
+                width: 100%;
+                background-color: var(--brand-blue);
+                flex-direction: column;
+                gap: 0;
+                box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+                border-bottom: 4px solid var(--brand-yellow);
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 18px 24px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }

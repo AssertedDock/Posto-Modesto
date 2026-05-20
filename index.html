@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logomodesto.jpg" type="image/x-icon">
+    <title>Posto Modesto | Parada Certa do Caminhoneiro</title>
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo-block">
+                <span class="logo-main">POSTO MODESTO</span>
+                <span class="logo-sub">Rede de Serviços</span>
+            </div>
+            
+            <button class="menu-toggle" id="menu-trigger" aria-label="Menu principal">☰</button>
+            
+            <ul class="nav-menu" id="menu-list">
+                <li><a href="#precos">Preços</a></li>
+                <li><a href="#patio">Infraestrutura</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#localizacao">Rotas</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Sua parada de <span>confiança</span> na rodovia.</h1>
+                <p>Combustível testado na bomba, pátio fechado monitorado e banho cortesia para quem roda o Brasil de ponta a ponta.</p>
+                <a href="#localizacao" class="btn btn-primary">Ver Rotas de Acesso</a>
+            </div>
+
+            <div class="panel-status">
+                <div class="panel-row">
+                    <span class="panel-label">Pátio de Descanso</span>
+                    <span class="panel-value indicator-green">Vagas Livres</span>
+                </div>
+                <div class="panel-row">
+                    <span class="panel-label">Restaurante</span>
+                    <span class="panel-value">05:00 - 22:00</span>
+                </div>
+                <div class="panel-row">
+                    <span class="panel-label">Segurança Física</span>
+                    <span class="panel-value" style="color: var(--white);">Ronda Ativa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Valores do Dia</h2>
+            <p class="section-subtitle">Preços atualizados diretamente da distribuidora, sem surpresas na bomba.</p>
+            
+            <div class="price-board">
+                <div class="price-card">
+                    <span class="badge-fuel">Diesel IpiMax</span>
+                    <h3 class="fuel-name">Diesel S10</h3>
+                    <p class="fuel-desc">Combustível aditivado de alta performance com baixo teor de enxofre para manter a integridade dos bicos injetores.</p>
+                    <div class="fuel-price-block">
+                        <span class="price-label">Preço</span>
+                        <div class="price-value">7,29<small>/L</small></div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <span class="badge-fuel badge-orange">Etanol</span>
+                    <h3 class="fuel-name">Etanol Aditivado</h3>
+                    <p class="fuel-desc">combina o etanol comum com um pacote de aditivos de alta tecnologia que promove a limpeza interna do motor.</p>
+                    <div class="fuel-price-block">
+                        <span class="price-label">Preço</span>
+                        <div class="price-value">4,59<small>/L</small></div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <span class="badge-fuel" style="background-color: #10b918;">Gasolina</span>
+                    <h3 class="fuel-name">Gasolina Comum</h3>
+                    <p class="fuel-desc">combustível padrão distribuído nos postos, composto por 73% de gasolina pura e 27% de etanol anidro</p>
+                    <div class="fuel-price-block">
+                        <span class="price-label">Preço na Pista</span>
+                        <div class="price-value">6,49<small>/L</small></div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <span class="badge-fuel" style="background-color: #10b918;">Gasolina</span>
+                    <h3 class="fuel-name">Gasolina AD DT Clean</h3>
+                    <p class="fuel-desc">gasolina aditivada da Ipiranga desenvolvida para manter o motor limpo, reduzir o atrito das peças e melhorar o consumo</p>
+                    <div class="fuel-price-block">
+                        <span class="price-label">Preço na Pista</span>
+                        <div class="price-value">6,69<small>/L</small></div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <span class="badge-fuel" style="background-color: #10B981;">Arla</span>
+                    <h3 class="fuel-name">Arla 32</h3>
+                    <p class="fuel-desc">Abastecimento direto no bico de alta vazão ou em galões selados. Certificação compulsória de pureza INMETRO.</p>
+                    <div class="fuel-price-block">
+                        <span class="price-label">Preço na Pista</span>
+                        <div class="price-value">4,14<small>/L</small></div>
+                    </div>
+                </div>
+		</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="patio" class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">Estrutura de Pátio Dedicada</h2>
+            <p class="section-subtitle">Aqui você não precisa improvisar. Área planejada para bitrens e rodotrens.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-text">
+                        <h3>Segurança Preventiva</h3>
+                        <p>Iluminação em LED de alta potência, circuito interno com gravação em nuvem e guarita blindada na entrada do pátio.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🚿</div>
+                    <div class="feature-text">
+                        <h3>Estações de Higiene</h3>
+                        <p>Duchas. Limpeza rigorosa feita a cada hora por equipe fixa.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🥩</div>
+                    <div class="feature-text">
+                        <h3>Alimentação</h3>
+                        <p>Restaurante. Restaurante com maravilhosos salgados e doces, lanches novos e fritos na hora</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="localizacao">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+		    <img src="logomodesto.jpg" alt="Descrição detalhada da imagem" width="500" height="300">
+                    <h4>POSTO MODESTO</h4>
+                    <p>Ponto estratégico de parada e logística pesada. Apoio total ao motorista profissional do início durante a rota.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Canais Diretos</h5>
+                    <ul>
+                        <li>Contato geral: (48) 93263-0666</li>
+                        <li>Borracharia JF: (48) 99827-2499</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5>Diretrizes de Rota</h5>
+                    <p style="margin-bottom: 12px;">Avenida Wilson Lemos, Nº 1246<br>Sentido Porto Belo</p>
+                    <button class="btn btn-primary" style="padding: 10px 16px; font-size: 0.85rem;" onclick="window.open('#')">Abrir no GPS</button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Posto Modesto S/A. CNPJ: 18.436.138/0001-01</p>
+                <p>Combustível Oficial Monitorado e Testado</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>s
