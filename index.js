@@ -29,4 +29,22 @@
                     });
                 });
             }
+
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const nome = document.getElementById('nome').value.trim();
+                    const contato = document.getElementById('email').value.trim();
+                    const mensagem = document.getElementById('mensagem').value.trim();
+
+                    if (!nome || !contato || !mensagem) {
+                        alert('Preencha todos os campos antes de enviar.');
+                        return;
+                    }
+
+                    alert(`Pergunta enviada! Obrigado, ${nome}. Em breve responderemos pelo WhatsApp.`);
+                    contactForm.reset();
+                });
+            }
         });
